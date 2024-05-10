@@ -1,0 +1,7 @@
+What is HTML?
+HTML stands for Hypertext markup language. It is a standard markup language. 
+It is used for developing or creating the web pages and 
+It is Used for text formatting and it can formate the text into images and tables and buttons etc.
+Hypertext indicates that is used specially for the web browsers.
+markup means generally a tag or elements
+language means english language

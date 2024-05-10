@@ -1,0 +1,9 @@
+What are the Void Elements in html?
+Void elements in html are elements that do not have closing tags means it does not contain the content.
+They are self-closing tags and it is also called as singular tags.
+ Some common void elements include 
+ <br>
+ <hr>
+ <img>
+ <input>
+ <link> and etc
