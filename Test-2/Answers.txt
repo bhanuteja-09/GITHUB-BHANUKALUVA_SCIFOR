@@ -1,0 +1,139 @@
+1. What is css? What are the different types of selectors in css?
+
+   CSS stands for cascading style sheet and It is a simple design language to simplify the process of making the web pages presentable or to get the web pages more affectively like good looking web page.
+   By using the CSS we can style the web page whatever/whenever we want.
+
+   And It is easy to manage a lot of websites page layouts and save a lot of time and by using the CSS we can make the global change to all the website pages.
+
+   Types of selectors in CSS:
+   1.Tag/Type Selectors
+   2.ID Selectors
+   3.Class selectors
+   4.Grouping Selectors
+   5.Universal Selectors6. Customization Selectors and etc
+
+2. What is CSS box model?
+
+   CSS box model is a functional concept that defines how the HTML elements dimensions and spacing are calculated.
+   The CSS box model treats every html element as a rectangular box consists of content, padding,margin,border.
+   
+
+   The components used in the box model are:
+   Content:It defines the actual text or images that displayed in the element.
+   padding: It specifies the transparent space between the content and border of the element.
+   margin: Transparent area added outside of the border
+   border:line that surrounds the padding and the content with in the html element.
+
+   this will defines the layout of the html element.
+
+3. Create a student registration form.
+
+   <html>
+   <head>
+   <title>Student Registration form</title>
+   </head>
+   <body>
+   <h2>Student Resistration form</h2>
+   <form >
+   <label for="firstname> First Name:</label>
+   <input type="text" id="firstname name="firstname" required><br />
+
+    <label for="firstname> First Name:</label>
+   <input type="text" id="firstname name="firstname" required><br />
+
+    <label for="lastname> Last Name:</label>
+   <input type="text" id="lastname name="lastname" required><br />
+
+    <label for="middlename> Middle Name:</label>
+   <input type="text" id="middlename name="middlename" required><br />
+
+    <label for="firstname> First Name:</label>
+   <input type="text" id="firstname name="firstname" required><br />
+  
+
+4. Define the list types in HTML
+
+    There are 3 types of lists in html, such as:
+
+     1. Ordered list
+     2. Unordered list 
+     3. Definition list
+
+1. Ordered list:
+   It is also called as number list. It is used to give the numbers to the list items and it is paired tag.
+   syntax:
+   <ol>Content.......</ol>
+
+   To specify the list items we use the li tag. it is paired tag and it can display the list of items.
+   syntax:
+   <li>content......</li>
+
+   EX:
+   <html>
+   <head>
+   <title>My list</title>
+   </head>
+   <body>
+   <h2>Ordered list</h2>
+   <ol>
+   <li>dog</li>
+   <li>monkey</li>
+   <li>cow</li>
+   </ol>
+   </body>
+   </html>
+
+2. Unordered list:
+    It is also called as bullet list. It is used to give the bullet to the list. It is a paired tag.
+    syntax:
+    <ul>content.....</ul>
+    To specify the list items we use the li tag. it is paired tag and it can display the list of items.
+     <li>content......</li>
+
+EX:
+ <html>
+ <head>
+   <title>My list</title>
+   </head>
+ <body>
+ <h4>An Unordered List:</h4>
+<ul>
+ <li>maths</li>
+ <li>science</li>
+ <li>english</li>
+</ul>
+</body>
+</html>
+
+3. Definition list:
+   It is also called as discriptive list. It is used to give definition to definition terms. It is a paired tag.
+
+   Syntax:
+   <dl>.....</dl>
+
+   To specify the definition tern we use the dt tag. it is paired tag and it can display the list of items.
+    
+    Syntax:
+   <dt>.....</dt>
+
+     To specify the definition data we use the dd tag. it is paired tag and it can display the list of items.
+    
+     Syntax:
+   <dd>.....</dd>
+
+ex:
+    <html>
+    <head>
+   <title>My list</title>
+   </head>
+    <body>
+    <h4>A Definition List:</h4>
+     <dl>
+       <dt>react</dt>
+     <dd>It is javascript FRAMEWORK</dd>
+       <dt>HTML</dt>
+    <dd>Hypertext markup language</dd>
+    </dl>
+    </body>
+    </html>
+
