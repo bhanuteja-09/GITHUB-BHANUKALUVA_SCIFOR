@@ -47,8 +47,6 @@
     <label for="middlename> Middle Name:</label>
    <input type="text" id="middlename name="middlename" required><br />
 
-    <input type="text" id="middleName" name="middleName"><br><br>
-
         <!-- Course Selection -->
         <label for="course">Course:</label>
         <select id="course" name="course" required>
