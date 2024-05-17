@@ -47,8 +47,34 @@
     <label for="middlename> Middle Name:</label>
    <input type="text" id="middlename name="middlename" required><br />
 
-    <label for="firstname> First Name:</label>
-   <input type="text" id="firstname name="firstname" required><br />
+    <input type="text" id="middleName" name="middleName"><br><br>
+
+        <!-- Course Selection -->
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="">Select a course</option>
+            <option value="computerScience">Computer Science</option>
+            <option value="business">Business</option>
+            <option value="engineering">Engineering</option>
+            <option value="arts">Arts</option>
+            <option value="medicine">Medicine</option>
+        </select><br><br>
+
+        <!-- Gender Selection -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+
+        <!-- Submit and Reset Buttons -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
   
 
 4. Define the list types in HTML
