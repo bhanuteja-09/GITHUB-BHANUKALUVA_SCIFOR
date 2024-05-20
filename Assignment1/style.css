@@ -1,0 +1,28 @@
+.student-table {
+  background-color: gray;  /* Grey background */
+  border: 5px solid black;     /* Black border */
+  border-collapse: collapse;     /* 2px cell spacing (implicit) */
+  padding: 5px;                /* Padding 5 */
+  width: 83%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.student-table th, .student-table td {
+  text-align: center;  /* Center-aligned text */
+  padding: 10px;        /* Individual cell padding (optional) */
+  border: 3px solid #ccc; /* Individual cell border (optional) */
+}
+
+.student-table thead th {
+  background-color: #ddd; 
+}
+
+.heading{
+  text-align: center;
+  text-decoration-color: aqua;
+}
+.heading2{
+  text-align: center;
+}
+

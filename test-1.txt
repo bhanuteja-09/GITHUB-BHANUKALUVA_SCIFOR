@@ -1,0 +1,45 @@
+1. 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=""UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <title>
+        Creating My web page
+    </title>
+    </head>
+    <body>
+        <h1>Welcome Everyone!</h1>
+        <p> I Joined Meta Scifor Intern on 7th May 2024</p>
+    </body>
+</html>
+
+2.What are the features of HTML?
+
+1. It is easy to use/learn and write
+2. It is platform Independent
+3. Image, Video and audio are used in HTML
+
+3.What is MIME?
+
+MIME stands for MultiPurpose internet mail extention . 
+It is used for taking care of tranfering the different kind of data through electronic mail.
+
+4.What is HTML?
+HTML stands for Hypertext markup language. It is a standard markup language. 
+It is used for developing or creating the web pages and 
+It is Used for text formatting and it can formate the text into images and tables and buttons etc.
+Hypertext indicates that is used specially for the web browsers.
+markup means generally a tag or elements
+language means english language
+
+5.What are the Void Elements in html?
+Void elements in html are elements that do not have closing tags means it does not contain the content.
+They are self-closing tags and it is also called as singular tags.
+ Some common void elements include 
+ <br>
+ <hr>
+ <img>
+ <input>
+ <link> and etc
