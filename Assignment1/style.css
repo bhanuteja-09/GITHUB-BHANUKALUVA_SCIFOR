@@ -1,3 +1,4 @@
+/* This External Style is for Table  */
 .student-table {
   background-color: gray;  /* Grey background */
   border: 5px solid black;     /* Black border */
@@ -10,8 +11,8 @@
 
 .student-table th, .student-table td {
   text-align: center;  /* Center-aligned text */
-  padding: 10px;        /* Individual cell padding (optional) */
-  border: 3px solid #ccc; /* Individual cell border (optional) */
+  padding: 10px;        /* Individual cell padding  */
+  border: 3px solid #ccc; /* Individual cell border  */
 }
 
 .student-table thead th {
@@ -21,9 +22,10 @@
 .heading{
   text-align: center;
   text-decoration-color: aqua;
+  font-style: oblique;
 }
 .heading2{
   text-align: center;
-  
+  font-style: oblique;
 }
 
