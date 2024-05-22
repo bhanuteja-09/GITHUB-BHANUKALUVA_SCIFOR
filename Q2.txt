@@ -1,5 +1,0 @@
-What are the features of HTML?
-
-1. It is easy to use/learn and write
-2. It is platform Independent
-3. Image, Video and audio are used in HTML

@@ -1,0 +1,170 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+}
+
+#products {
+    margin-top: 20px;
+}
+
+#products h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    background: #fff;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #d7a1c6;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.product-item h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.product-item .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-item .rating {
+    font-size: 0.9rem;
+    color: #ffcc00;
+}
+
+.product-item .description {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.product-item .actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.product-item .actions button {
+    background: #2196F3; /* Blue background color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px; /* Adjust padding for button size */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    height: 40px;
+    width: 150px;
+    /* margin-left: 10px; */
+    margin-right: 6px;
+}
+
+.product-item .actions button:hover {
+    background: #0e5ab3; /* Darker blue on hover */
+}
+
+/* Footer styling */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.product-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Add margin between rows */
+}
+.product-item .availability-in{
+    color: rgb(16, 114, 16);
+
+}
+.product-item .availability-out{
+    color: rgb(225, 9, 9);
+
+}
+.product-item .price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #d11115;
+    text-align: left;
+}
+.product-item .original-price {
+    text-decoration: line-through;
+    color:gray; /* Color for the original price */
+    margin-right: 5px; /* Add some space between the original price and discount */
+}
+
+.product-item .discount {
+    color:  #008000; /* Color for the discount percentage */
+}

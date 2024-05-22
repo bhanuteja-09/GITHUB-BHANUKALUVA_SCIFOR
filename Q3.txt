@@ -1,4 +1,0 @@
-What is MIME?
-
-MIME stands for MultiPurpose internet mail extention . 
-It is used for taking care of tranfering the different kind of data through electronic mail.
