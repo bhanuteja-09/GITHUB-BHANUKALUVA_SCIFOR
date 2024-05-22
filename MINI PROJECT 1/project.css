@@ -18,6 +18,9 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    width: 95%;
+    /* top:10px; */
+    margin-left: 40px;
 }
 
 header .logo {
@@ -139,8 +142,9 @@ footer {
     padding: 1rem 0;
     position: absolute;
     bottom: -370px;
-    width: 100%;
+    width: 95%;
     /* top:10px; */
+    margin-left: 40px;
 }
 .product-row {
     display: flex;
