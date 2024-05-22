@@ -1,0 +1,142 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    /* background: linear-gradient(to right, #9d908d, #feb47b); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: linear-gradient(to right, #ead6d1, #ccd07c);
+    /* background-color: #d48d8d; */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(173, 191, 92, 0.2);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 1s ease-in-out;
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* height: 610px; */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+    /* height: 65px; */
+    padding: 3px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: color 0.9s;
+    
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+input:focus + label {
+    color: #007BFF;
+}
+button {
+    /* margin-bottom: -40px; */
+    margin-left: 120px;
+    margin-top: 20px;
+    width:170px;
+    padding: 13px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.error {
+    display: none;
+    color: red;
+    font-size: 0.875em;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+input:invalid + .error {
+    display: block;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
+.success-message {
+    display: none;
+    color: green;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.success-message {
+    display: none;
+    color: green;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.success-message:target {
+    display: block;
+}
+
+
