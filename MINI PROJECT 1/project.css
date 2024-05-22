@@ -14,13 +14,14 @@ body {
 
 /* Header styling */
 header {
-    background: #7cb951;
+    background: #6363d2;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
     width: 95%;
     /* top:10px; */
     margin-left: 40px;
+    border-radius: 5px;
 }
 
 header .logo {
@@ -75,7 +76,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #d7a1c6;
+    background-color: #e0f5fb;
+    /* background-color: #d7a1c6; */
     position: relative;
 }
 
@@ -101,7 +103,8 @@ main {
 
 .product-item .rating {
     font-size: 0.9rem;
-    color: #ffcc00;
+    color: #f7cb1c;
+    /* color: #ffcc00; */
 }
 
 .product-item .description {
@@ -136,15 +139,16 @@ main {
 
 /* Footer styling */
 footer {
-    background: #7cbf4c;
+    background: #6363d2;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
     position: absolute;
-    bottom: -370px;
+    bottom: -400px;
     width: 95%;
     /* top:10px; */
     margin-left: 40px;
+    border-radius: 5px;
 }
 .product-row {
     display: flex;
@@ -269,7 +273,7 @@ footer {
             padding: 1rem 0;
             /* position: absolute; */
             /* bottom: 600px; */
-            bottom: -3970px;
+            bottom: -3990px;
             width: 100%;
             /* top:10px; */
     
@@ -290,4 +294,14 @@ footer {
   border-radius:90%;
   margin-bottom: -25px;
   margin-left: 10px;
+}
+.heading{
+    text-align: center;
+    font-size: 2.6rem; /* Adjust the font size */
+    color: #333;
+    margin-bottom: 20px; /* Add spacing below the heading */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add letter spacing */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 4px 4px 4px rgba(104, 99, 195, 0.444); /* Add text shadow */
 }
