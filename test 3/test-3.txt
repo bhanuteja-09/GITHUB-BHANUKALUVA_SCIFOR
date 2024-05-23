@@ -173,7 +173,7 @@ some of the examples of semantic html elements such as
 </html>
 
 6. What is the ALT attribute in html?
- alt defines that alternative and alt attribute is sued in img tag to provide the alternative text for an image.
+ alt defines that alternative and alt attribute is used in img tag to provide the alternative text for an image.
  and the text serves servaral important purposes.
 
 
