@@ -1,0 +1,179 @@
+1. What are the various formatting tag in html?
+  In html there are serveral ways of formatting the tags that allows you to apply various styles and structure to the text on the web page.
+  some of the formatting tags are listed below,
+
+Ex:
+  <b>
+  <strong>
+  <i>
+  <em>
+  <mark>
+  <small>
+  <p>
+  <hr>
+  <blockquote>
+
+2. How can we merge two rows and columns into single row and colunm also write a code?
+  
+  To merge rows and columns in an html table, we can use rowspan and colspan attributes with in the <td> or <tr> elements.
+
+  Ex1:
+<html>
+<head>
+    <title>Merge Columns</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td colspan="2">Merged Column 1 and 2</td>
+            <td>Column 3</td>
+        </tr>
+        <tr>
+            <td>Column 1</td>
+            <td>Column 2</td>
+            <td>Column 3</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+Ex2:
+ 
+<html>
+<head>
+    <title>Merge Rows and Columns</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="2">Merged Row 1 and 2, Column 1 and 2</td>
+            <td>Row 1, Column 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Column 3</td>
+        </tr>
+        <tr>
+            <td>Row 3, Column 1</td>
+            <td>Row 3, Column 2</td>
+            <td>Row 3, Column 3</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+3. How is cellspacing different from cellpadding?
+
+cellspacing:
+cellspacing is used for providing the space between the cells
+To specify the cell spacing and its distance, You can use the line such as
+cellspacing="x" to the table tag.
+
+syntax:
+<table cellspacing="7">
+
+Ex:
+<table cellspacing="9">
+<tr>
+<th>Name:</th>
+<th>Age:</th>
+</tr>
+<tr>
+<td>Bhanu</td>
+<td>24</td>
+</tr>
+<tr>
+<td>Teja</td>
+<td>22</td>
+</tr>
+</table>
+
+cellpadding:
+Cell padding is used for distance between the text in the cell and edge of the cell.
+ to specify cell padding and it's distance  ,we can use the line such as 
+ cellpadding="X"
+
+ syntax:
+ <table cellpadding"6">
+
+ex:
+<table cellpadding="9">
+<tr>
+<th>ENO:</th>
+<th>Name:</th>
+</tr>
+<tr>
+<td>1</td>
+<td>24</td>
+</tr>
+<tr>
+<td>2</td>
+<td>22</td>
+</tr>
+</table>
+
+ex:
+<table border="7" cellpadding="19" 
+cellspacing="8">
+<tr>
+<td>cell1</td>
+<td>cell2</td>
+</tr>
+</table>
+
+4. What are the semantic elements?
+   a semantic element describes its meaning to us.
+   ans the tags which accurately describe their purpose and type of the content, so it is called as a semantic elements ot tags.
+
+Ex:
+<h2>header</h2>
+
+<table>
+<tr>
+<th>EID</th>
+<th>Ph.No</th>
+<tr>
+<tr>
+<td>1</td>
+<td>7873893992</td>
+</tr>
+<table>
+ from the above code , we can easily understand that content inside the h2 is header and content inside the table is table data
+
+
+some of the examples of semantic html elements such as 
+<h1>to<h6>,<form>,<table>,<header> and <footer>
+
+5. Write a program to insert the background image in html?
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Background Image</title>
+    <style>
+        body {
+            background-image: url('background.jpg');
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Webpage</h1>
+    <p> webpage with a background image.</p>
+</body>
+</html>
+
+6. What is the ALT attribute in html?
+ alt defines that alternative and alt attribute is sued in img tag to provide the alternative text for an image.
+ and the text serves servaral important purposes.
+
+
