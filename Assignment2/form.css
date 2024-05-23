@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
+    background-color:rgb(227, 241, 246);
     /* background: linear-gradient(to right, #9d908d, #feb47b); */
     display: flex;
     justify-content: center;
@@ -85,7 +86,7 @@ button {
     margin-top: 20px;
     width:170px;
     padding: 13px;
-    background-color: #007BFF;
+    background-color: #3da038;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -121,22 +122,6 @@ input:invalid {
 input:valid {
     border-color: green;
 }
-.success-message {
-    display: none;
-    color: green;
-    font-size: 1.2em;
-    margin-top: 10px;
-}
 
-.success-message {
-    display: none;
-    color: green;
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-.success-message:target {
-    display: block;
-}
 
 
