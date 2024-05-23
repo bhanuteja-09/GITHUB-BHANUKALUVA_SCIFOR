@@ -3,38 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - TechTrove</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us - TechTrove</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <span>TechTrove</span>
-                <img src="assets/techtrovelogo.jpg" alt="Logo">
-            </div>
-            <nav>
+        <div>
+            <div class="logo">TechTrove <img src="assets/techtrovelogo.jpg" alt="TechTrove Logo" class="logo-img"></div>
+            <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <main>
-        <section>
-            <h2>Contact Us</h2>
-            <p>We take inspiration from the World's best cuisines, and create a
-                unique fusion experience.</p>
+   <main>
+        <div class="contact-us">
+            <h1>Contact Us</h1>
+            <p>We would love to hear from you! Please fill out this form and we will get in touch with you shortly.</p>
             
-        </section>
-      
-    </main>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error">Username must be 4-10 characters long.</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error">Please enter a valid email address.</span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <!-- <span class="error">Message must be in min 10  and max 350 .</span> -->
+                </div>
+                <button type="submit">Submit</button>
+            </form>
 
+            <div class="contact-info">
+                <h2>Our Contact Information</h2>
+                <p>Email: support@techtrove.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: 123 Tech Street, Innovation City, 45678</p>
+            </div>
+        </div>
+    </main>
     <footer>
-        <p>&copy; 2024 TechTrove. All rights reserved.</p>
+        <p>&copy; 2024 TechTrove</p>
     </footer>
 </body>
 </html>
