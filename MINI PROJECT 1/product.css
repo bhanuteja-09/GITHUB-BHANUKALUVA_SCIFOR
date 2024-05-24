@@ -18,34 +18,58 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-    width: 95%;
+    width: 98%;
     /* top:10px; */
-    margin-left: 40px;
+    margin-left: 20px;
     border-radius: 5px;
 }
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 
 header .logo {
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+header .logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
 }
 
 header nav ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 header nav ul li {
-    display: inline;
+    /* display: inline; */
     margin: 0 10px;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 /* Main content styling */
 main {
     /* padding: 20px; */
     flex: 1;
+    width: 100%;
+    padding: 20px;
 }
 
 #products {
@@ -144,11 +168,15 @@ footer {
     text-align: center;
     padding: 1rem 0;
     position: absolute;
+    /* position: relative; */
     bottom: -400px;
-    width: 95%;
+    width: 98%;
     /* top:10px; */
-    margin-left: 40px;
+    margin-left: 20px;
     border-radius: 5px;
+}
+footer p {
+    margin: 0;
 }
 .product-row {
     display: flex;
@@ -280,7 +308,7 @@ footer {
     }
 }
 
-.logo{
+/* .logo{
     text-align: left;
     margin-left: 40px;
 }
@@ -294,7 +322,7 @@ footer {
   border-radius:90%;
   margin-bottom: -25px;
   margin-left: 10px;
-}
+} */
 .heading{
     text-align: center;
     font-size: 2.6rem; /* Adjust the font size */
