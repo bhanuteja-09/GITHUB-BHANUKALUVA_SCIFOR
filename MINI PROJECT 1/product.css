@@ -62,6 +62,12 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a i {
+    margin-right: 5px; /* Spacing between icon and text */
 }
 
 /* Main content styling */
@@ -161,23 +167,6 @@ main {
     background: #0e5ab3; /* Darker blue on hover */
 }
 
-/* Footer styling */
-footer {
-    background: #6363d2;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: absolute;
-    /* position: relative; */
-    bottom: -400px;
-    width: 98%;
-    /* top:10px; */
-    margin-left: 20px;
-    border-radius: 5px;
-}
-footer p {
-    margin: 0;
-}
 .product-row {
     display: flex;
     justify-content: space-around;
@@ -333,3 +322,53 @@ footer p {
     font-weight: bold; /* Make the text bold */
     text-shadow: 4px 4px 4px rgba(104, 99, 195, 0.444); /* Add text shadow */
 }
+/* Footer styling */
+footer {
+    background: #6363d2;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    /* position: relative; */
+    bottom: -420px;
+    width: 98%;
+    /* top:10px; */
+    margin-left: 20px;
+    border-radius: 5px;
+}
+footer p {
+    margin: 0;
+    margin-left: 120px;
+  
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.social-media {
+    display: flex;
+    margin-right: 100px;
+}
+
+.social-media a {
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+/* .social-media .fab.fa-facebook-f { color: #3b5998; }
+.social-media .fab.fa-twitter { color: #1da1f2; }
+.social-media .fab.fa-linkedin-in { color: #0077b5; }
+.social-media .fab.fa-instagram { color: #e4405f; }
+.social-media .fas.fa-envelope { color: #c71610; }
+.social-media .fab.fa-google { color: #db4437; } */
+
+.social-media .fab.fa-facebook-f { color:white; }
+.social-media .fab.fa-twitter { color:white; }
+.social-media .fab.fa-linkedin-in { color:white; }
+.social-media .fab.fa-instagram {color:white; }
+.social-media .fas.fa-envelope { color:white;  }
+.social-media .fab.fa-google {color:white;  }

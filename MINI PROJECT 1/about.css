@@ -191,6 +191,12 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a i {
+    margin-right: 5px; /* Spacing between icon and text */
 }
 
 /* Main content styling */
@@ -216,7 +222,33 @@ footer {
 }
 footer p {
     margin: 0;
+    margin-left: 120px;
+  
 }
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.social-media {
+    display: flex;
+    margin-right: 100px;
+}
+
+.social-media a {
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+.social-media .fab.fa-facebook-f { color:white; }
+.social-media .fab.fa-twitter { color:white; }
+.social-media .fab.fa-linkedin-in { color:white; }
+.social-media .fab.fa-instagram {color:white; }
+.social-media .fas.fa-envelope { color:white;  }
+.social-media .fab.fa-google {color:white;  }
+
 *{
     margin: 0;
     padding: 0;
