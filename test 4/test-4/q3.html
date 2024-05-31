@@ -1,0 +1,139 @@
+<html>
+<head>
+    <title>Responsive Webpage</title>
+    <style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #0d1894;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #5b61bb;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .container {
+            flex: 1;
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .content {
+            display: flex;
+            gap: 20px;
+        }
+
+        .content section {
+            flex: 1;
+            padding: 20px;
+            background-color: #af8080;
+            border: 1px solid #ddd;
+        }
+
+        footer {
+            background-color: #1326a0;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header, footer {
+                padding: 15px;
+            }
+
+            .container {
+                width: 100%;
+                padding: 0 10px;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .content section {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Awesome Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <section>
+                <h2>About Me</h2>
+                <p>Hello! I am a web developer with a passion for creating beautiful and functional websites. I have experience in various web technologies and love to learn new things.</p>
+            </section>
+            <section>
+                <h2>My Projects</h2>
+                <p>I have worked on several projects ranging from simple landing pages to complex web applications. Check out my portfolio to see some of my work.</p>
+            </section>
+            <section>
+                <h2>Blog</h2>
+                <p>In my blog, I share my thoughts on web development, tutorials, and tips that I have learned throughout my career. Feel free to read and leave comments.</p>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>My Awesome Website &copy; 2024</p>
+    </footer>
+</body>
+</html>

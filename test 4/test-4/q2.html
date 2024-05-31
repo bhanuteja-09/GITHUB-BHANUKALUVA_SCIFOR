@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Product Table</title>
+    <style>
+        tbody{
+            background-color: #b4acf3;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #db6c6c;
+        }
+        th {
+            background-color: #8be895;
+        }
+        tfoot {
+            background-color: #8be895;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Product 1</td>
+                <td>₹1000</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Product 2</td>
+                <td>₹2000</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Product 3</td>
+                <td>₹1500</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Total Price</td>
+                <td>₹4500</td> 
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

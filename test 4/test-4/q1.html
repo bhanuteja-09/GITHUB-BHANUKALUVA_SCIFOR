@@ -1,0 +1,138 @@
+<html>
+<head>
+    <title>Flexbox Navigation Bar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #b9b4e0;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .search-profile {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-profile input[type="text"] {
+            padding: 5px;
+            margin-right: 10px;
+             background-color: #fff;
+        }
+
+        .search-profile .profile-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            flex: 1;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .content {
+            background-color: #91dd98;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #8f89c0;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="search-profile">
+                <input type="text" placeholder="Search...">
+                <div class="profile-icon">
+                    <img src="https://source.unsplash.com/random/30x30"  alt="User Profile">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to Tech Innovators</h2>
+            <p>At Tech Innovators, we are dedicated to pushing the boundaries of technology and innovation. </p>
+        </div>
+        <div class="content">
+            <h2>Our Services</h2>
+            <p>We offer a wide range of services to cater to your technological needs:</p>
+            <ul>
+                <li><strong>Custom Software Development:</strong> Tailored solutions to meet your specific business requirements.</li>
+                <li><strong>Artificial Intelligence:</strong> Leveraging AI to solve complex problems and enhance decision-making.</li>
+                <li><strong>Cloud Computing:</strong> Scalable and secure cloud solutions to drive your business forward.</li>
+                <li><strong>IT Consulting:</strong> Expert advice to help you navigate the ever-changing tech landscape.</li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p><strong>Email:</strong> contact@techinnovators.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Address:</strong> 123 Innovation Drive, Tech City, TC 45678</p>
+            <p>Follow us on social media to stay updated with the latest news and developments:</p>
+            <p><strong>Facebook:</strong> facebook.com/techinnovators</p>
+            <p><strong>Twitter:</strong> twitter.com/tech_innovators</p>
+            <p><strong>LinkedIn:</strong> linkedin.com/company/techinnovators</p>
+        </div>
+    </div>
+    <footer>
+        <p>Tech Innovators &copy; 2024</p>
+    </footer>
+</body>
+</html>
