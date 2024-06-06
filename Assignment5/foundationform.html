@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
+   <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #c2fcc4;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            font-weight: bold;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="password"],
+        .form-container .button {
+            margin-bottom: 15px;
+        }
+        .form-container .button {
+            width: 100%;
+        }
+        .form-container fieldset {
+            border: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        .form-container fieldset legend {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="grid-x grid-padding-x align-center">
+        <div class="medium-6 cell form-container">
+            <h1 class="form-title">Sign Up</h1>
+            <form>
+                <label for="name">Name
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </label>
+                <label for="email">Email
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </label>
+                <label for="password">Password
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                </label>
+                <fieldset class="fieldset">
+                    <legend>Gender</legend>
+                    <input type="radio" name="gender" value="male" id="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" value="female" id="female">
+                    <label for="female">Female</label>
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend>Hobbies</legend>
+                    <input type="checkbox" name="hobbies" value="singing" id="singing">
+                    <label for="music">Singing</label>
+                    <input type="checkbox" name="hobbies" value="reading" id="reading">
+                    <label for="reading">Reading</label>
+                    <input type="checkbox" name="hobbies" value="travel" id="travel">
+                    <label for="travel">Travel</label>
+                    <input type="checkbox" name="hobbies" value="sports" id="sports">
+                    <label for="sports">Sports</label>
+                </fieldset>
+                <button type="submit" class="button primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Table</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        .table-container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .table-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        table {
+            width: 100%;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #0078d4;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="grid-x grid-padding-x align-center">
+        <div class="medium-10 cell table-container">
+            <h1 class="table-title">Foundation Table</h1>
+            <table class="table-scroll striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Subbu</td>
+                        <td>subbu@example.com</td>
+                        <td>Male</td>
+                        <td>USA</td>
+                    </tr>
+                    <tr>
+                        <td>Bhanu</td>
+                        <td>bhanu@example.com</td>
+                        <td>Female</td>
+                        <td>Canada</td>
+                    </tr>
+                    <tr>
+                        <td>Gowtham</td>
+                        <td>gowtham@example.com</td>
+                        <td>Male</td>
+                        <td>UK</td>
+                    </tr>
+                    <tr>
+                        <td>Lisa</td>
+                        <td>lisa@example.com</td>
+                        <td>Female</td>
+                        <td>Australia</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
