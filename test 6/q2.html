@@ -23,32 +23,44 @@
         document.write("<p>studentName: " + studentName + "</p>");
         document.write("<p>studentAge: " + studentAge + "</p>");
         document.write("<p>studentPosition: " + studentPosition + "</p>");
+    </script>
+</body>
+</html>
 
 
-        // block demonstrating scope differences
-  {
-      var varVariable = 'Inner var variable'; // This affects the outer varVariable
-      let letVariable = 'Inner let variable'; // This is a different variable than the outer letVariable
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scope Differences: var vs let</title>
+</head>
+<body>
+<!-- Output container -->
+<div id="output-container">
+  <h2>Output:</h2>
+  <!-- Script block to demonstrate scope differences -->
+  <script>
+    // Declaring variables with string values
+    var varVariable = 'This is a var variable';
+    let letVariable = 'This is a let variable';
 
-      console.log('Inside block:');
-      console.log(varVariable); // Output: Inner var variable
-      console.log(letVariable); // Output: Inner let variable
-  
-      document.write('<h2>Inside block:</h2>');
-      document.write('<p>varVariable: ' + varVariable + '</p>'); // Output: Inner var variable
-      document.write('<p>letVariable: ' + letVariable + '</p>'); // Output: Inner let variable
+    // Example block demonstrating scope differences
+    {
+        var varVariable = 'Inner var variable'; // This affects the outer varVariable
+        let letVariable = 'Inner let variable'; // This is a different variable than the outer letVariable
+
+        // Output inside the block
+        document.write('<p>Inside block:</p>');
+        document.write('<p>varVariable: ' + varVariable + '</p>'); // Output: Inner var variable
+        document.write('<p>letVariable: ' + letVariable + '</p>'); // Output: Inner let variable
     }
 
-  // Displaying the  values outside the block
-  console.log('Outside block:');
-  console.log(varVariable); // Output: Inner var variable (affected by the inner block)
-  console.log(letVariable); // Output: This is a let variable (unchanged outside the block)
-
-  // Writing values outside the block
-  document.write('<h2>Outside block:</h2>');
-  document.write('<p>varVariable: ' + varVariable + '</p>'); // Output: Inner var variable (affected by the inner block)
-  document.write('<p>letVariable: ' + letVariable + '</p>'); // Output: This is a let variable (unchanged outside the block)
-    </script>
-    </script>
+    // Output outside the block
+    document.write('<p>Outside block:</p>');
+    document.write('<p>varVariable: ' + varVariable + '</p>'); // Output: Inner var variable (affected by the inner block)
+    document.write('<p>letVariable: ' + letVariable + '</p>'); // Output: This is a let variable (unchanged outside the block)
+  </script>
+</div>
 </body>
 </html>
