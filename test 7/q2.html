@@ -1,0 +1,51 @@
+<!-- 2.WRITE A PROGRAM USING PROMPT TO INPUT A NUMBER (1-7). USE A SWITCH STATEMENT TO PRINT THE CORRESPONDING DAY OR 'INVALID DAY' FOR NUMBERS OUTSIDE THIS RANGE. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day of the week</title>
+</head>
+<body>
+    <h1>Enter a Number to Find the Corresponding Day of the Week</h1>
+    <script>
+        // Prompt the user to enter a number between 1 and 7
+        let number = prompt("Enter a number (1-7):");
+
+        // Convert the input to a number
+         number = parseInt(number);
+
+        // Determine the corresponding day using a switch statement
+        let day;
+        switch (number) {
+            case 1:
+                day = "Sunday";
+                break;
+            case 2:
+                day = "Monday";
+                break;
+            case 3:
+                day = "Tuesday";
+                break;
+            case 4:
+                day = "Wednesday";
+                break;
+            case 5:
+                day = "Thursday";
+                break;
+            case 6:
+                day = "Friday";
+                break;
+            case 7:
+                day = "Saturday";
+                break;
+            default:
+                day = "INVALID DAY";
+        }
+
+        // Display the result
+        alert(day);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!--  3.WRITE A PROGRAM THAT DETERMINES WHETHER A PERSON IS ELIGIBLE TO VOTE BASED ON THEIR AGE (VOTING AGE IS 18 OR OLDER).USING TERNARY OPERATOR. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Eligibility Check</title>
+</head>
+<body>
+    <h1>Voting Eligibility Check</h1>
+    <script>
+        // Prompt the user to enter their age
+        let age = prompt("Enter your age:");
+
+        // Convert the input to a number
+         age = parseInt(age);
+
+        // Determine eligibility using ternary operator
+        let message = (age >= 18) ? "Person is eligible to vote." : "Person is not eligible to vote.";
+
+        // Display the result
+        alert(message);
+    </script>
+</body>
+</html>
