@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods Example</title>
+</head>
+<body>
+    <h1>JavaScript String Methods</h1>
+    
+    <script>
+        let str = "Hello, Everyone My name is Bhanu";
+        
+        // match method
+        let matchExample = str.match(/Hello/g); // Finds all occurrences of "Hello"
+        document.write("<strong>Original string:</strong> " + str + "<br><br>");
+        document.write("<strong>match(/Hello/g):</strong> " + matchExample + "<br>");
+
+        // endsWith method
+        let endsWithExample = str.endsWith("again!"); // Checks if the string ends with "again!"
+        document.write("<strong>endsWith('again!'):</strong> " + endsWithExample + "<br>");
+
+        // repeat method
+        let repeatExample = str.repeat(2); // Repeats the string twice
+        document.write("<strong>repeat(2):</strong> " + repeatExample + "<br>");
+
+        // toLowerCase method
+        let toLowerCaseExample = str.toLowerCase(); // Converts the string to lowercase
+        document.write("<strong>toLowerCase():</strong> " + toLowerCaseExample + "<br>");
+
+        // toUpperCase method
+        let toUpperCaseExample = str.toUpperCase(); // Converts the string to uppercase
+        document.write("<strong>toUpperCase():</strong> " + toUpperCaseExample + "<br>");
+    </script>
+</body>
+</html>
