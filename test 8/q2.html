@@ -1,0 +1,43 @@
+<!-- 2.CREATE A FUNCTION THAT TAKES AN ARRAY OF CHARACTERS AND COUNTS HOW MANY TIMES EACH CHARACTER APPEARS. RETURN AN OBJECT.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Character Count</title>
+ </head>
+ <body>
+     <h1>Character Count</h1>
+     
+     <script>
+         function countCharacters(charArray) {
+             const charCount = {};
+ 
+             charArray.forEach(char => {
+                 if (charCount[char]) {
+                     charCount[char]++;
+                 } else {
+                     charCount[char] = 1;
+                 }
+             });
+ 
+             return charCount;
+         }
+ 
+         // Example usage
+         const characters = ['a', 'b', 'a', 'c', 'b', 'a', 'd'];
+         const result = countCharacters(characters);
+ 
+         // Display the results
+         document.write("<ul>");
+         for (const char in result) {
+             document.write("<li>" + char + ": " + result[char] + "</li>");
+         }
+         document.write("</ul>");
+     </script>
+ </body>
+ </html>
+ 
+

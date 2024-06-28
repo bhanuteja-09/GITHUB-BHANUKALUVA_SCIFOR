@@ -1,0 +1,47 @@
+<!-- 4.CREATE A FUNCTION NAMED FORMATSTRING THAT TAKES A STRING AS INPUT AND PERFORMS THE FOLLOWING TRANSFORMATIONS:
+a.CONVERT THE ENTIRE STRING TO UPPERCASE.
+b.CONVERT THE ENTIRE STRING TO LOWERCASE.
+c.EXTRACT A SUBSTRING FROM INDEX 2 TO 5 (INCLUSIVE). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Format String</title>
+</head>
+<body>
+    <h1>Format String</h1>
+    
+    <script>
+        function formatString(inputString) {
+            // a. Convert the entire string to uppercase
+            let uppercaseString = inputString.toUpperCase();
+
+            // b. Convert the entire string to lowercase
+            let lowercaseString = inputString.toLowerCase();
+
+            // c. Extract a substring from index 2 to 5 (inclusive)
+            let substring = inputString.substring(2, 6); // 6 is exclusive in substring
+
+            // Return an object with all transformations
+            return {
+                originalString: inputString,
+                uppercaseString: uppercaseString,
+                lowercaseString: lowercaseString,
+                extractedSubstring: substring
+            };
+        }
+
+        // Example usage
+        const input = "ExampleString";
+        const result = formatString(input);
+
+        // Display the results using document.write
+        document.write("<strong>Original String:</strong> " + result.originalString + "<br>");
+        document.write("<strong>Uppercase String:</strong> " + result.uppercaseString + "<br>");
+        document.write("<strong>Lowercase String:</strong> " + result.lowercaseString + "<br>");
+        document.write("<strong>Extracted Substring (index 2 to 5):</strong> " + result.extractedSubstring + "<br>");
+    </script>
+</body>
+</html>

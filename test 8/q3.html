@@ -1,0 +1,42 @@
+<!-- 3.CREATE A FUNCTION NAMED REVERSEANDSORTARRAY THAT TAKES AN ARRAY OF CHARACTERS AS INPUT AND PERFORMS THE FOLLOWING OPERATIONS:
+a.REVERSE THE ORDER OF ELEMENTS IN THE ARRAY.
+b.SORT THE REVERSED ARRAY IN ALPHABETICAL ORDER.
+c.RETURN THE SORTED ARRAY.
+THE FUNCTION SHOULD REVERSE THE ARRAY FIRST AND THEN SORT IT ALPHABETICALLY BEFORE RETURNING THE FINAL SORTED ARRAY. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse and Sort Array</title>
+</head>
+<body>
+    <h1>Reverse and Sort Array</h1>
+    
+    <script>
+        function reverseAndSortArray(charArray) {
+            // Display original array
+            document.write("<strong>Original Array:</strong> [" + charArray.join(", ") + "]<br>");
+
+            // a. Reverse the order of elements in the array
+            let reversedArray = charArray.slice().reverse();
+            document.write("<strong>Reversed Array:</strong> [" + reversedArray.join(", ") + "]<br>");
+
+            // b. Sort the reversed array in alphabetical order
+            let sortedArray = reversedArray.slice().sort();
+            document.write("<strong>Sorted Array:</strong> [" + sortedArray.join(", ") + "]<br>");
+
+            // c. Return the sorted array
+            return sortedArray;
+        }
+
+        // Example usage
+        const characters = ['d', 'a', 'c', 'b'];
+        const result = reverseAndSortArray(characters);
+
+        // Display the final result
+        document.write("<strong>Final Result:</strong> " + result + "<br>");
+    </script>
+</body>
+</html>

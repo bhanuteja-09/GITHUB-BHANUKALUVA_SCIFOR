@@ -1,0 +1,52 @@
+<!-- 1.WRITE A FUNCTION THAT TAKES A DATE OBJECT AS INPUT AND PERFORMS THE FOLLOWING OPERATIONS:
+a.GET THE CURRENT MONTH FROM THE DATE OBJECT.
+b.SET THE MONTH OF THE DATE OBJECT TO THE NEXT MONTH.
+c.SET THE DATE OF THE DATE OBJECT TO THE 15TH OF THE CURRENT MONTH.
+d.GET THE FULL YEAR OF THE ADJUSTED DATE OBJECT. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Operations</title>
+</head>
+<body>
+    <h1>Date Operations</h1>
+    <p id="demo"></p>
+    
+    <script>
+        function performDateOperations(date) {
+            // a. Get the current month from the Date object
+            let currentMonth = date.getMonth(); // getMonth returns 0-11 (0 for January, 11 for December)
+            document.write("<strong>Current Month:</strong> " + (currentMonth + 1) + "<br>");
+
+            // b. Set the month of the Date object to the next month
+            date.setMonth(currentMonth + 1);
+            document.write("<strong>Adjusted Month:</strong> " + (date.getMonth() + 1) + "<br>");
+
+            // c. Set the date of the Date object to the 15th of the current month
+            date.setDate(15);
+            document.write("<strong>Adjusted Date:</strong> " + date.toDateString() + "<br>");
+
+            // d. Get the full year of the adjusted Date object
+            let fullYear = date.getFullYear();
+            document.write("<strong>Full Year of Adjusted Date:</strong> " + fullYear + "<br>");
+            
+            // Return an object with results
+            return {
+                currentMonth: currentMonth + 1, // Adding 1 to match human-readable month (1 for January, 12 for December)
+                adjustedDate: date,
+                fullYear: fullYear
+            };
+        }
+
+        // Example usage
+        let date = new Date();
+        let result = performDateOperations(date);
+
+        
+        // document.write("<strong>Adjusted Date:</strong> " + result.adjustedDate.toDateString() + "<br>");
+    </script>
+</body>
+</html>
