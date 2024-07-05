@@ -1,0 +1,43 @@
+<!--  CREATE AN HTML FILE.WRITE A JAVASCRIPT FUNCTION TO MAKE AN AJAX CALL USING XMLHTTPREQUEST.PARSE THE JSON RESPONSE AND DISPLAY THE DATA IN AN HTML DIV FORMAT. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <style>
+        #data {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Load the Data Using AJAX</h1>
+    <button onclick="fetchData()">Fetch Data</button>
+    <div id="data"></div>
+
+    <script>
+        function fetchData() {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true);
+            request.onreadystatechange = function() {
+                if (request.readyState == 4 && request.status == 200) {
+                    var jsonResponse = JSON.parse(request.responseText);
+                    displayData(jsonResponse);
+                    console.log('Data loaded with Ajax:', jsonResponse); // Log data to console
+                }
+            };
+            request.send();
+        }
+
+        function displayData(data) {
+            var dataDiv = document.getElementById('data');
+            dataDiv.innerHTML = '<p><strong>Title:</strong> ' + data.title + '</p>'
+                              + '<p><strong>Body:</strong> ' + data.body + '</p>';
+        }
+    </script>
+</body>
+</html>

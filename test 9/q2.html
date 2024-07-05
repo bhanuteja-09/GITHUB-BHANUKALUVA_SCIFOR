@@ -1,0 +1,48 @@
+<!-- CREATE A NEW HTML FILE.WRITE A JAVASCRIPT FUNCTION TO MAKE A GET REQUEST USING THE FETCH API.PARSE THE JSON RESPONSE AND DISPLAY THE DATA IN AN HTML DIV FORMAT. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+    <style>
+        #data {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Load the Data Using Fetch API</h1>
+    <button onclick="fetchData()">Fetch Data</button>
+    <div id="data"></div>
+
+    <script>
+        function fetchData() {
+            fetch('https://dummyjson.com/products/1')
+                .then(response => response.json())
+                .then(data => {
+                    displayData(data);
+                    console.log('Data loaded with Fetch:', data);  // Log data to console
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function displayData(data) {
+            var dataDiv = document.getElementById('data');
+            dataDiv.innerHTML = '<p><strong>Title:</strong> ' + data.title + '</p>'
+                              + '<p><strong>Description:</strong> ' + data.description + '</p>'
+                              + '<p><strong>Price:</strong> $' + data.price + '</p>'
+                              + '<p><strong>Brand:</strong> ' + data.brand + '</p>'
+                              + '<p><strong>Category:</strong> ' + data.category + '</p>'
+                              + '<p><strong>Rating:</strong> ' + data.rating + '</p>'
+                              + '<p><strong>Stock:</strong> ' + data.stock + '</p>';
+        }
+    </script>
+</body>
+</html>
+
+
+
