@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    padding-top: 56px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    margin-bottom: 0;
+}
+
+.container img {
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+#backToTop, #scrollToBottom {
+    position: fixed;
+    right: 20px;
+    z-index: 99;
+}
+
+#backToTop {
+    bottom: 80px;
+    display: none;
+}
+
+#scrollToBottom {
+    bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.jumbotron h1 {
+    animation: fadeIn 2s ease-in-out;
+}
