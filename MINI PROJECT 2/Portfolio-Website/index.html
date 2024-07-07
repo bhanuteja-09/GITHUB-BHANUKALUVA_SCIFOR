@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <title>My Portfolio</title>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="#">My Portfolio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,35 +16,110 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Me</a>
+                    <a class="nav-link" href="#about">About Me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="projects.html">Projects</a>
+                    <a class="nav-link" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <header class="jumbotron text-center bg-primary text-white">
+    <header class="jumbotron text-center bg-primary text-white" id="home">
         <div class="container">
             <h1 class="display-4">Welcome to My Portfolio</h1>
             <p class="lead">Showcasing my skills and projects.</p>
-            <a href="about.html" class="btn btn-light btn-lg">Learn More About Me</a>
+            <a href="#about" class="btn btn-light btn-lg">Learn More About Me</a>
         </div>
     </header>
+
+    <section id="about" class="container-fluid section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/profile.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-8">
+                    <p>Hello! I'm a passionate web developer with experience in creating dynamic and responsive websites. My skills include HTML, CSS, JavaScript, and more.</p>
+                    <h3>Skills</h3>
+                    <ul class="list-unstyled">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Bootstrap</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container-fluid section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="card">
+                    <img src="images/project1.jpg" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">Description of Project 1.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2</h5>
+                        <p class="card-text">Description of Project 2.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/project3.jpg" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">Description of Project 3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container-fluid section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control" id="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
 
     <footer class="text-center mt-5">
         <p>&copy; 2024 My Portfolio</p>
     </footer>
 
-    <button id="backToTop" class="btn btn-primary" title="Go to top">Top</button>
-    <button id="scrollToBottom" class="btn btn-primary" title="Go to bottom">Bottom</button>
+    <button id="backToTop" class="btn btn-primary" title="Go to top">Back To Top</button>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>

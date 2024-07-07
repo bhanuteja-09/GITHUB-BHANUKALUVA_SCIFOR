@@ -1,7 +1,10 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    position: relative;
-    padding-top: 56px;
+    padding-top: 56px; /* Adjusts for fixed navbar height */
 }
 
 .navbar-brand {
@@ -13,6 +16,17 @@ body {
     background-color: #007bff;
     color: white;
     margin-bottom: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
 }
 
 .container img {
@@ -24,19 +38,16 @@ body {
     margin-bottom: 20px;
 }
 
-#backToTop, #scrollToBottom {
+#backToTop {
     position: fixed;
     right: 20px;
+    bottom: 20px;
     z-index: 99;
-}
-
-#backToTop {
-    bottom: 80px;
     display: none;
 }
 
-#scrollToBottom {
-    bottom: 20px;
+footer {
+    margin-top: 40px;
 }
 
 @media (max-width: 768px) {
@@ -56,4 +67,23 @@ body {
 
 .jumbotron h1 {
     animation: fadeIn 2s ease-in-out;
+}
+
+.navbar-nav li {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+/* CSS Grid for Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Flexbox for About Me Section */
+#about .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }

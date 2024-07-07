@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const backToTopButton = document.getElementById("backToTop");
+
+    backToTopButton.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 200) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    });
+
     // Form validation
     const form = document.querySelector("#contactForm");
     form.addEventListener("submit", function(event) {
@@ -28,26 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Back to top and bottom buttons
-    const backToTopButton = document.getElementById("backToTop");
-    const scrollToBottomButton = document.getElementById("scrollToBottom");
-
-    backToTopButton.addEventListener("click", function() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    scrollToBottomButton.addEventListener("click", function() {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-    });
-
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > 200) {
-            backToTopButton.style.display = "block";
-        } else {
-            backToTopButton.style.display = "none";
-        }
-    });
-
     // Responsive menu toggle
     const navbarToggler = document.querySelector(".navbar-toggler");
     const navbarCollapse = document.querySelector(".navbar-collapse");
@@ -55,4 +49,16 @@ document.addEventListener("DOMContentLoaded", function() {
     navbarToggler.addEventListener("click", function() {
         navbarCollapse.classList.toggle("show");
     });
+
+    function animateNav() {
+        const navItems = document.querySelectorAll('.navbar-nav li');
+        navItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.style.opacity = 0;
+                setTimeout(() => {
+                    item.style.opacity = 1;
+                }, 300);
+            }, index * 100);
+        });
+    }
 });
