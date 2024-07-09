@@ -16,48 +16,48 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Smooth scrolling for navigation links
-    const navbarLinks = document.querySelectorAll('.navbar-nav a');
-    navbarLinks.forEach(navbarLink => {
-        navbarLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            const hash = this.hash;
-            const offset = document.querySelector('.navbar').offsetHeight;
+    // const navbarLinks = document.querySelectorAll('.navbar-nav a');
+    // navbarLinks.forEach(navbarLink => {
+    //     navbarLink.addEventListener('click', function(event) {
+    //         event.preventDefault();
+    //         const hash = this.hash;
+    //         const offset = document.querySelector('.navbar').offsetHeight;
 
-            window.scrollTo({
-                top: document.querySelector(hash).offsetTop - offset,
-                behavior: 'smooth'
-            });
-        });
-    });
+    //         window.scrollTo({
+    //             top: document.querySelector(hash).offsetTop - offset,
+    //             behavior: 'smooth'
+    //         });
+    //     });
+    // });
 
     // Form validation
-    const form = document.querySelector("#contactForm");
-    form.addEventListener("submit", function(event) {
-        let valid = true;
-        const fields = ["name", "email", "subject", "message"];
-        fields.forEach(function(field) {
-            const input = document.getElementById(field);
-            if (input.value.trim() === "") {
-                valid = false;
-                input.classList.add("is-invalid");
-            } else {
-                input.classList.remove("is-invalid");
-            }
-        });
+    // const form = document.querySelector("#contactForm");
+    // form.addEventListener("submit", function(event) {
+    //     let valid = true;
+    //     const fields = ["name", "email", "subject", "message"];
+    //     fields.forEach(function(field) {
+    //         const input = document.getElementById(field);
+    //         if (input.value.trim() === "") {
+    //             valid = false;
+    //             input.classList.add("is-invalid");
+    //         } else {
+    //             input.classList.remove("is-invalid");
+    //         }
+    //     });
 
-        const email = document.getElementById("email");
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email.value.trim())) {
-            valid = false;
-            email.classList.add("is-invalid");
-        } else {
-            email.classList.remove("is-invalid");
-        }
+    //     const email = document.getElementById("email");
+    //     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    //     if (!emailPattern.test(email.value.trim())) {
+    //         valid = false;
+    //         email.classList.add("is-invalid");
+    //     } else {
+    //         email.classList.remove("is-invalid");
+    //     }
 
-        if (!valid) {
-            event.preventDefault();
-        }
-    });
+    //     if (!valid) {
+    //         event.preventDefault();
+    //     }
+    // });
 
     // Responsive menu toggle
     const navbarToggler = document.querySelector(".navbar-toggler");
@@ -95,3 +95,48 @@ tabcontent.classList.remove("active-tab");
 event.currentTarget.classList.add("active-link");
 document.getElementById(tabname).classList.add("active-tab");
 }
+
+// Function to validate the contact form
+function validateForm() {
+    // Selecting form elements by their IDs
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    // Selecting error message elements
+    var nameError = document.getElementById('nameError');
+    var emailError = document.getElementById('emailError');
+    var messageError = document.getElementById('messageError');
+
+    // Resetting previous error messages
+    nameError.textContent = '';
+    emailError.textContent = '';
+    messageError.textContent = '';
+
+    // Simple validation checks
+    if (name.trim() === '') {
+        nameError.textContent = 'Please enter your name';
+        return false;
+    }
+    
+    if (email.trim() === '') {
+        emailError.textContent = 'Please enter your email';
+        return false;
+    }
+
+    // Email validation with regex
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        emailError.textContent = 'Please enter a valid email address';
+        return false;
+    }
+
+    if (message.trim() === '') {
+        messageError.textContent = 'Please enter your message';
+        return false;
+    }
+
+    // If all validations pass, the form will submit
+    return true;
+}
+
