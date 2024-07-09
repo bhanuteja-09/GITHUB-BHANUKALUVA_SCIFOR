@@ -1,32 +1,76 @@
+/* Reset default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Smooth scrolling behavior for the whole document */
 html {
     scroll-behavior: smooth;
 }
 
+/* Global body styles */
 body {
     font-family: Arial, sans-serif;
-    padding-top: 56px; /* Adjusts for fixed navbar height */
+    background-color: black; /* Set background to black */
+    color: white; /* Set text color to white */
+    margin: 0; /* Remove default margin */
+    padding-top: 56px; /* Adjust for fixed navbar height */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color:  #262626 !important; /* Set navbar background to black */
 }
 
 .navbar-brand {
     font-weight: bold;
+    color: white; /* Set navbar brand text color to white */
 }
 
+.navbar-nav .nav-link {
+    color: white !important; /* Set navbar links text color to white */
+}
+
+.navbar-toggler {
+    border-color: white; /* Set color of the navbar toggler icon */
+}
+
+.navbar-toggler-icon {
+    background-color: white; /* Set background color of the navbar toggler icon */
+}
+
+/* Jumbotron (Header) styles */
 .jumbotron {
-    text-align: center;
-    background-color: #007bff;
+    background-color: black !important; /* Set jumbotron background to black */
     color: white;
-    margin-bottom: 0;
-    min-height: 100vh;
+    margin: 0;
+    padding: 60px 20px; /* Adjust padding for better readability */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the header takes up the entire viewport height */
 }
 
+.display-5 {
+    font-size: 2rem; /* Adjust smaller heading font size */
+}
+
+.lead {
+    font-size: 2.5rem; /* Adjust larger paragraph font size */
+    margin-bottom: 0; /* Remove bottom margin for tighter spacing */
+}
+
+.jumbotron h1 {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Section styles */
 .section {
-    min-height: 100vh;
     padding: 40px 0;
-    display: flex;
-    align-items: center;
+    background-color: black !important; /* Ensure sections also have a black background */
+    color: white; /* Ensure text color in sections is white */
 }
 
 .container img {
@@ -36,8 +80,27 @@ body {
 
 .card {
     margin-bottom: 20px;
+    background-color: black !important; /* Dark background for cards */
+    color: white; /* White text color for cards */
+    border: 1px solid #333;
 }
 
+/* Contact form styles */
+#contactForm .form-control {
+    background-color: black; /* Set form field background to black */
+    color: white; /* Set form field text color to white */
+    border-color: white; /* Set form field border color to white */
+}
+
+/* Footer styles */
+footer {
+    padding: 20px 0; /* Add padding to the footer */
+    background-color: black !important; /* Ensure footer also has a black background */
+    color: white; /* Ensure text color in footer is white */
+    margin: 0; /* Remove margin */
+}
+
+/* Back to top button styles */
 #backToTop {
     position: fixed;
     right: 20px;
@@ -46,16 +109,55 @@ body {
     display: none;
 }
 
-footer {
-    margin-top: 40px;
-}
-
+/* Media query for smaller screens */
 @media (max-width: 768px) {
     .navbar-nav {
         text-align: center;
     }
+
+    .custom-image {
+        width: 100%; /* Adjust image width to 100% for smaller screens */
+        margin: 0; /* Remove margin adjustments for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .content {
+        position: relative;
+        top: 20px; /* Adjust top position for smaller screens */
+        left: 0; /* Adjust left position for smaller screens */
+        padding: 0 10px; /* Add padding for better spacing on smaller screens */
+    }
 }
 
+/* Media query for tablet screens */
+@media (max-width: 769px){
+    .custom-image {
+        width: 50%; /* Adjust image width to 50% for tablet screens */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure image is displayed as block element */
+        margin: 0 auto; /* Center image horizontally */
+    }
+
+    .content {
+        width: 50%; /* Set width of content to 50% for tablet screens */
+        max-width: 500px; /* Limit max-width of content for larger tablets */
+        margin: 0 auto; /* Center content horizontally */
+        position: relative;
+        top: 0; /* Reset top position */
+        left: 0; /* Reset left position */
+        padding: 0 20px; /* Adjust padding for tablet screens */
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .content{
+        position:relative;
+        top: 80px;
+        left: 50px;
+    }
+}
+/* Keyframe animation for fadeIn effect */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -65,25 +167,414 @@ footer {
     }
 }
 
-.jumbotron h1 {
-    animation: fadeIn 2s ease-in-out;
+/* Custom style for the red letter "B" */
+.text-red {
+    color: red;
 }
 
-.navbar-nav li {
-    opacity: 1;
-    transition: opacity 0.5s;
+/* Custom style for the image */
+.custom-image {
+    max-width: 100%; /* Ensures the image does not exceed its container's width */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Ensures proper spacing */
+    margin-left: auto; /* Aligns image to the right */
+    margin-right: -50px; /* Adjusts the image position */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+    width: 75%; /* Adjust the width of the image */
+    height: 100%; /* Automatically adjust height while maintaining aspect ratio */
+    position: relative; /* Add position relative */
+    bottom: 20px; /* Adjust bottom position */
 }
 
-/* CSS Grid for Projects Section */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* Ensure the body has a consistent background color */
+html, body {
+    background-color: black !important;
 }
 
-/* Flexbox for About Me Section */
-#about .row {
+/* Tab styles */
+.nav-tabs .nav-item {
+    margin-bottom: 10px;
+    
+}
+
+.nav-tabs .nav-link {
+    color: white;
+    background-color: transparent;
+    border: none; /* Remove border */
+    border-radius: 0;
+    /* transition: color 0.3s; */
+
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    
+    color: white; /* Change text color for active/focus/hover */
+    background-color: transparent; /* Remove background color change */
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove box shadow */
+    outline: none; /* Remove outline */
+}
+
+
+.nav-link {
+    position:relative;
+    right: 200px;
+    font-size: 18px;
+}
+
+.nav-link::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left:10px;
+    bottom: 6px;
+    transition: 0.5s;
+    
+}
+.nav-link:hover::after{
+    width:80%;
+}
+
+.tab-titles{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    margin: 20px 0 40px;
+    }
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    }
+.tab-links::after{
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: 0.5s;
+        }
+.tab-links.active-link::after{
+            width: 50%;
+            }
+ .tab-contents ul li{
+                list-style: none;
+                margin: 10px 0;
+                }
+.tab-contents ul li span{
+                color: #ff004f;
+                font-size: 14px;
+                }
+.tab-contents{
+                    display: none;
+                    }
+                    
+.tab-contents.active-tab{
+                    display: block;
+                    }
+.profile{
+         border-radius: 500px;
+        }
+
+#about{
+            padding: 80px 0;
+            color: #ababab;
+            }
+.row{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            }
+.about-col-1{
+                flex-basis: 35%;
+                }
+.about-col-1 img{
+                width: 100%;
+                border-radius: 15px;
+                }
+.about-col-2{
+                flex-basis: 60%; I
+            }
+
+.sub-title{
+    font-size: 60px;
+    font-weidth: 600;
+    color: white;
 }
+.about-me-text {
+    font-size: 1.1rem; /* Adjust font size */
+    line-height: 1.6; /* Adjust line height for readability */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+   
+    text-align: justify; /* Justify text */
+}
+.profile{
+    border-radius: 90px;
+}
+
+
+/* Make the profile picture have small rounded corners */
+.img-fluid.rounded-corners {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Ensure the height is the same as the width */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    border-radius: 10px; /* Make the corners slightly rounded */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Make sure the image is displayed as a block element */
+}
+.navbar-brand {
+    position: relative;
+    left:70px;
+    font-size: 28px;
+}
+/* Button styles */
+.btn-light-red {
+    color: black;
+    background-color: white;
+    /* background: #ff004f; */
+    border-color: red;
+    /* transition: all 0.3s ease; */
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.btn-light-red:hover {
+    color: white;
+    background-color: rgb(247, 95, 95);
+    border-color: red;
+    transform: translateY(10px);
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    width: 300px; /* Set desired width */
+    height: 300px; /* Set desired height */
+    object-fit: cover; /* Ensure the image fits within the dimensions */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+/* Work section styling */
+.section {
+    padding: 60px 0;
+  }
+  
+  .sub-title {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+  
+  .work-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .work {
+    flex: 1 1 30%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 300px; /* Increase the height of the images */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+    border-radius: 10px; /* Adjust as needed for rounded corners */
+}
+  
+  /* Adjusting the size of the images */
+  .work img {
+    transition: transform 0.5s;
+    width: 100%;
+    height: 290px;
+    max-width: 300px; /* You can adjust the max-width as needed */
+    max-height: 500px; /* You can adjust the max-height as needed */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+  }
+
+.layer{
+    width:100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+ transform: scale(0.9);
+}
+.work:hover .layer{
+    height: 100%;
+  
+}
+
+ .button {
+    display: block;
+    margin: 50px auto; /* Adjust margin to center vertically */
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.button:hover {
+    background: #ff004f;
+    color: white;
+    text-decoration: none;
+}
+
+ 
+.contact-left{
+    flex-basis: 35%;
+
+}
+.contact-right{
+    flex-basis: 60%; 
+}
+.contact-left p{
+ margin-top: 25px;
+}
+.contact-left p i{
+    color:#ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top:25px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color:#ff004f;
+    transform: translateX(-5px);
+}
+.downloadbutton{
+    display:inline-block;
+    background: #ff004f;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+   transition: background 0.5s;
+   border-radius: 5px;
+}
+.downloadbutton:hover{
+    text-decoration: none;
+    color: white;
+    background: #fa4880;
+}
+.contact-right form{
+    width: 100%;
+
+}
+
+form input, form textarea{
+    width:100%;
+    border:0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 16px 0;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 6px;
+}
+/* .sub-title1{
+    font-size: 40px;
+} */
+
+.submitbutton{
+ padding: 8px 30px;
+ font-size: 18px;
+ margin-top: 10px;
+ cursor: pointer;
+ background-color: #ff004f;
+ border: none;
+ color: white;
+ border-radius: 5px;
+}
+.submitbutton:hover{
+    color: white;
+    background: #fa4880;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 10px;
+    position:relative;
+    bottom:0px;
+    color:white;
+}
+ /* .footer{
+    text-align: center;
+    background: #7b7474;
+ } */
+ .backtotop{
+    padding: 8px 30px;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #ff004f;
+    border: none;
+    color: white;
+    border-radius: 5px;
+   }
+   .backtotop:hover{
+       color: white;
+       background: #fa4880;
+   }

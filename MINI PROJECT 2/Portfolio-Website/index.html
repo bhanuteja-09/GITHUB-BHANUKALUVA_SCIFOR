@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>My Portfolio</title>
+    <title>Bhanu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">My Portfolio</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <a class="navbar-brand" href="#">
+            <span class="text-red">B</span>hanu
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,95 +35,143 @@
         </div>
     </nav>
 
-    <header class="jumbotron text-center bg-primary text-white" id="home">
+    <header class="jumbotron bg-black text-white" id="home">
         <div class="container">
-            <h1 class="display-4">Welcome to My Portfolio</h1>
-            <p class="lead">Showcasing my skills and projects.</p>
-            <a href="#about" class="btn btn-light btn-lg">Learn More About Me</a>
+            <div class="row">
+                <div class="content col-md-6">
+                    <h2 class="display-5 mb-4">Front End Developer</h2>
+                    <h1 class="display-3 mb-4">Hi, I'm <span class="text-red">Bhanu</span></h1>
+                    <h1 class="display-3"> From India</h1>
+                    <a href="#about" class="btn btn-light-red btn-lg mt-4">Learn More About Me</a>
+
+                 </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <img src="images/reddress-croped.png" alt="Profile Picture" class="custom-image">
+                </div>
+            </div>
         </div>
     </header>
-
-    <section id="about" class="container-fluid section">
+    
+    <section id="about" class="container-fluid section bg-black">
         <div class="container">
-            <h2>About Me</h2>
             <div class="row">
-                <div class="col-md-4">
-                    <img src="images/profile.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
-                </div>
-                <div class="col-md-8">
-                    <p>Hello! I'm a passionate web developer with experience in creating dynamic and responsive websites. My skills include HTML, CSS, JavaScript, and more.</p>
-                    <h3>Skills</h3>
-                    <ul class="list-unstyled">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Bootstrap</li>
-                        <li>React</li>
-                    </ul>
-                </div>
+            <div class="about-col-1">
+            <img class="img-fluid rounded-circle" src="images/Photo.jpg">
+            </div>
+            <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p class="about-me-text">Hello! I'm a passionate web developer with experience in creating dynamic and responsive websites. My skills include HTML, CSS, JavaScript, and more. Learning new technologies to enhance user experiences and create visually appealing designs.
+            Continuous improvement and attention to detail are key aspects of my approach to web development projects.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab( 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Frontend Web Development</span><br>Building web sites/User interfaces</li>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                <li><span>2024 - Current</span><br>Frontend Developer Intern at Meta Scifor technologies</li>
+                                
+                                <li><span>May-2022 - Dec-2022</span><br>Junior React Developer at Encora Innovation Labs India Pvt Ltd. </li>
+                                <li><span>Jan-2022 - May-2022</span><br>Intern as Frontend React Developer at Pratian technologies.</li>
+                                </ul>
+                            </div>   
+                                <div class="tab-contents" id="education">
+                                <ul>
+                                <li><span>2021</span><br>B. Tech From KITS, Markapur, A.P</li>
+                                <li><span>2017</span><br>Inter From Gowtham Junior College, Markapur, A.P. </li>
+                                <li><span>2015</span><br>SSC from ZPH Girls Markapur, A.P.</li>
+                                </ul>
+                            </div> 
+            </div>
+
             </div>
         </div>
     </section>
 
-    <section id="projects" class="container-fluid section">
+    <section id="projects" class="container-fluid section bg-black">
         <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="card">
-                    <img src="images/project1.jpg" class="card-img-top" alt="Project 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Project 1</h5>
-                        <p class="card-text">Description of Project 1.</p>
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list d-flex justify-content-between">
+                <div class="work">
+                    <img src="images/jobcheck.jpeg" alt="Image 1" class="image">
+                    <div class="layer">
+                        <h3>Job Check Website</h3>
+                        <p>job portal platforms like Naukri and LinkedIn, connecting users with professionals.</p>
+                        <a href="https://github.com/bhanuteja-09/Job-Check.git" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Project 2</h5>
-                        <p class="card-text">Description of Project 2.</p>
+                <div class="work">
+                    <img src="images/react1.jpeg" alt="Image 1" class="image">
+                    <div class="layer">
+                        <h3>React Project</h3>
+                        <p>React-based web application with dynamic components and state management.</p>
+                        <a href="https://github.com/bhanuteja-09/React1.git" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="images/project3.jpg" class="card-img-top" alt="Project 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Project 3</h5>
-                        <p class="card-text">Description of Project 3.</p>
+                <div class="work">
+                    <img src="images/bootstrap.jpeg" alt="Image 1" class="image">
+                    <div class="layer">
+                        <h3>Bootstrap Design</h3>
+                        <p>Responsive design using Bootstrap framework with custom styling.</p>
+                        <a href="https://github.com/bhanuteja-09/Bootstrap.git" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
                     </div>
+                </div>
+            </div>
+            <a href="#" class="button">See more</a>
+        </div>
+    </section>
+    
+
+    <section id="contact" class="container-fluid section bg-black">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title1">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i> bhanutejaswinikaluva@gamil.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 7729888344</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/bhanu.kaluva.7/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/bhanukaluva/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/bhanu-tejaswini-kaluva/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/Bhanu_Resume.pdf" download class="downloadbutton">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="submitbutton">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
+    
+    <div class="copyright">
+        <p>&copy; 2024 Bhanu</p>
+    </div>
 
-    <section id="contact" class="container-fluid section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" class="form-control" id="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" id="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    </section>
+    <!-- <footer class="text-center bg-black"> -->
+    <!-- <footer class="footer">
+        <p>&copy; 2024 Bhanu</p>
+    </footer> -->
 
-    <footer class="text-center mt-5">
-        <p>&copy; 2024 My Portfolio</p>
-    </footer>
-
-    <button id="backToTop" class="btn btn-primary" title="Go to top">Back To Top</button>
+    <button id="backToTop" class="backtotop">Back To Top</button>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>

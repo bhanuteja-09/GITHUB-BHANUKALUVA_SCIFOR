@@ -1,16 +1,33 @@
 document.addEventListener("DOMContentLoaded", function() {
     const backToTopButton = document.getElementById("backToTop");
 
+    // Smooth scrolling to top when back to top button is clicked
     backToTopButton.addEventListener("click", function() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
+    // Show or hide back to top button based on scroll position
     window.addEventListener("scroll", function() {
         if (window.scrollY > 200) {
             backToTopButton.style.display = "block";
         } else {
             backToTopButton.style.display = "none";
         }
+    });
+
+    // Smooth scrolling for navigation links
+    const navbarLinks = document.querySelectorAll('.navbar-nav a');
+    navbarLinks.forEach(navbarLink => {
+        navbarLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            const hash = this.hash;
+            const offset = document.querySelector('.navbar').offsetHeight;
+
+            window.scrollTo({
+                top: document.querySelector(hash).offsetTop - offset,
+                behavior: 'smooth'
+            });
+        });
     });
 
     // Form validation
@@ -50,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
         navbarCollapse.classList.toggle("show");
     });
 
+    // Animate navigation items on load
     function animateNav() {
         const navItems = document.querySelectorAll('.navbar-nav li');
         navItems.forEach((item, index) => {
@@ -61,4 +79,19 @@ document.addEventListener("DOMContentLoaded", function() {
             }, index * 100);
         });
     }
+
+    animateNav(); // Trigger animation on initial load
 });
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+for (tablink of tablinks) {
+tablink.classList.remove("active-link");
+}
+for(tabcontent of tabcontents) {
+tabcontent.classList.remove("active-tab");
+}
+event.currentTarget.classList.add("active-link");
+document.getElementById(tabname).classList.add("active-tab");
+}
