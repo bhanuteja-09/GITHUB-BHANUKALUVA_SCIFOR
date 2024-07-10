@@ -90,11 +90,9 @@
                                 <li><span>2015</span><br>SSC from ZPH Girls Markapur, A.P.</li>
                                 </ul>
                             </div> 
-            </div>
-
+                        </div>
             </div>
         </div>
-
     <!-- </div> -->
     </section>
 
@@ -183,6 +181,65 @@
     </footer> -->
 
     <button id="backToTop" class="backtotop">Back To Top</button>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scrolling for navigation links
+    const navbarLinks = document.querySelectorAll('.navbar-nav a');
+    navbarLinks.forEach(navbarLink => {
+        navbarLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            const hash = this.hash;
+            const offset = document.querySelector('.navbar').offsetHeight;
+
+            // Smooth scroll to the hash target
+            window.scrollTo({
+                top: document.querySelector(hash).offsetTop - offset,
+                behavior: 'smooth'
+            });
+
+            // Close the responsive navbar menu after clicking on a link
+            const navbarCollapse = document.querySelector(".navbar-collapse");
+            navbarCollapse.classList.remove("show");
+        });
+    });
+
+    // Responsive menu toggle
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+
+    navbarToggler.addEventListener("click", function() {
+        navbarCollapse.classList.toggle("show");
+
+        // Toggle the aria-expanded attribute for accessibility
+        const isOpen = navbarCollapse.classList.contains("show");
+        navbarToggler.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    // Close navbar menu when clicking outside on mobile
+    document.addEventListener('click', function(event) {
+        if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
+            navbarCollapse.classList.remove('show');
+            navbarToggler.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    // Animate navigation items on load
+    function animateNav() {
+        const navItems = document.querySelectorAll('.navbar-nav li');
+        navItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.style.opacity = 0;
+                setTimeout(() => {
+                    item.style.opacity = 1;
+                }, 300);
+            }, index * 100);
+        });
+    }
+
+    animateNav(); // Trigger animation on initial load
+});
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>

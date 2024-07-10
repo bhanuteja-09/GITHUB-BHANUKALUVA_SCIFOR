@@ -42,6 +42,7 @@ body {
 
 /* Jumbotron (Header) styles */
 .jumbotron {
+    
     background-color: black !important; /* Set jumbotron background to black */
     color: white;
     margin: 0;
@@ -109,31 +110,167 @@ footer {
     display: none;
 }
 
+
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .navbar-nav {
         text-align: center;
     }
-
+  /* .jumbotron{
+    background-image: url(images/image.png);
+  } */
     .custom-image {
-        width: 100%; /* Adjust image width to 100% for smaller screens */
-        margin: 0; /* Remove margin adjustments for smaller screens */
+       
+        width: 50%; /* Set width of content to 50% for tablet screens */
+       
+        position:relative;
+        top:20px;
+        /* width: 0px;  */
+        margin: 0; 
+        
         height: auto; /* Maintain aspect ratio */
     }
-
-    .content {
+    .content h2{
+        width: 70%; /* Set width of content to 50% for tablet screens */
+        max-width: 500px; /* Limit max-width of content for larger tablets */
+        font-size: 16px;
         position: relative;
         top: 20px; /* Adjust top position for smaller screens */
         left: 0; /* Adjust left position for smaller screens */
-        padding: 0 10px; /* Add padding for better spacing on smaller screens */
+        padding: 0px 10px; /* Add padding for better spacing on smaller screens */
+    }
+    .content h1{
+        width: 70%; /* Set width of content to 50% for tablet screens */
+        max-width: 500px; /* Limit max-width of content for larger tablets */
+       font-size: 30px;
+        position: relative;
+        top: 20px; /* Adjust top position for smaller screens */
+        left: 0; /* Adjust left position for smaller screens */
+        padding: 0px 10px; /* Add padding for better spacing on smaller screens */
+    }
+    .about-col-1 {
+        /* margin-left: 200px; */
+        flex-basis: 100%; /* Full width for image column */
+        text-align: center; /* Center align the image */
+        margin-bottom: 20px; /* Add some bottom margin for spacing */
+    }
+
+    .about-col-1 img {
+        width: 80%; /* Adjust image width */
+        max-width: 300px; /* Set maximum width for larger screens */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 50%; /* Ensure rounded corners */
+        display: block; /* Ensure image is displayed as block element */
+        margin-left: 110px; /* Center the image horizontally */
+    }
+
+    .about-col-2 {
+        flex-basis: 100%; /* Full width for text column */
+        text-align: left; /* Center align the text */
+    }
+    .about-me-text{
+        margin-left: 30px;
+    }
+    .tab-links{
+        /* margin-left: 20px; */
+        position:relative;
+        left:30px;
+    }
+    .work-list {
+        margin-right: 15px;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .work {
+        width: 100%; /* Full width for each work item */
+        margin-bottom: 40px; /* Add bottom margin for spacing */
+    }
+
+    .contact-left, .contact-right {
+        width: 100%; /* Full width for both columns */
+        text-align: center; /* Center align content */
+        margin-bottom: 10px; /* Add bottom margin for spacing */
+    }
+
+    .contact-right {
+        margin-bottom: 5px;
+        margin-top: 0px; /* Adjust top margin for separation */
+    }
+
+    .sub-title1{
+        position: relative;
+        left:30px;
+    }
+    .downloadbutton {
+        position: relative;
+        left:25px;
+        display: block; /* Display as block for full width */
+        /* margin: 20px ;  */
+        /* Center align with margin */
+    }
+
+    #contactForm {
+        text-align: center; /* Center align form elements */
+    }
+
+    #contactForm input,
+    #contactForm textarea,
+    #contactForm button {
+        
+        width: 350px; /* Full width for form elements */
+        margin-bottom: 15px; /* Add bottom margin for spacing */
+    }
+
+    .submitbutton {
+        padding: 12px 0; /* Adjust padding for button */
+    }
+
+    .social-icons {
+        width:100%;
+        margin-left: 25px;
+        text-align: center; /* Center align social icons */
+        margin-top: 20px; /* Add top margin for separation */
+    }
+
+    .social-icons a {
+        margin: 0 10px; /* Add horizontal margin between icons */
+    }
+    .fa-solid.fa-up-right-from-square {
+        margin-left: 5px; /* Example margin adjustment */
+        
+    }
+
+    .contact-left p {
+        display: inline-flex; /* Use inline-flex to align items inline */
+        align-items: center; /* Center align items vertically */
+        margin-bottom: 10px; /* Add bottom margin for spacing */
+    }
+
+    .fa-sharp,
+    .fa-solid {
+        width: 20px; /* Adjust width of icons */
+        margin-left: 45px; /* Add right margin for spacing */
+    }
+
+    .fa-solid.fa-square-phone {
+        width: 18px; /* Adjust width specifically for phone icon */
+    }
+    .navbar-brand {
+        position: relative !important;
+        left: 20px !important;
+    }
+    .nav-link{
+        margin-left: 150px;
     }
 }
+
 
 /* Media query for tablet screens */
 @media (max-width: 769px){
     .custom-image {
         width: 50%; /* Adjust image width to 50% for tablet screens */
-        height: auto; /* Maintain aspect ratio */
+        height: 50%; /* Maintain aspect ratio */
         display: block; /* Ensure image is displayed as block element */
         margin: 0 auto; /* Center image horizontally */
     }
@@ -147,9 +284,13 @@ footer {
         left: 0; /* Reset left position */
         padding: 0 20px; /* Adjust padding for tablet screens */
     }
+    .nav-link{
+        /* margin-left: 150px; */
+        color: white;
+    }
 }
 
-
+/* Media query for Desktop screens */
 @media (min-width: 1024px) {
     .content{
         position:relative;
@@ -157,6 +298,11 @@ footer {
         left: 50px;
     }
 }
+
+
+
+
+
 /* Keyframe animation for fadeIn effect */
 @keyframes fadeIn {
     from {

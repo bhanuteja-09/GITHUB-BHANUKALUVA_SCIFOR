@@ -1,63 +1,23 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const backToTopButton = document.getElementById("backToTop");
-
-    // Smooth scrolling to top when back to top button is clicked
-    backToTopButton.addEventListener("click", function() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    // Show or hide back to top button based on scroll position
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > 200) {
-            backToTopButton.style.display = "block";
-        } else {
-            backToTopButton.style.display = "none";
-        }
-    });
-
     // Smooth scrolling for navigation links
-    // const navbarLinks = document.querySelectorAll('.navbar-nav a');
-    // navbarLinks.forEach(navbarLink => {
-    //     navbarLink.addEventListener('click', function(event) {
-    //         event.preventDefault();
-    //         const hash = this.hash;
-    //         const offset = document.querySelector('.navbar').offsetHeight;
+    const navbarLinks = document.querySelectorAll('.navbar-nav a');
+    navbarLinks.forEach(navbarLink => {
+        navbarLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            const hash = this.hash;
+            const offset = document.querySelector('.navbar').offsetHeight;
 
-    //         window.scrollTo({
-    //             top: document.querySelector(hash).offsetTop - offset,
-    //             behavior: 'smooth'
-    //         });
-    //     });
-    // });
+            // Smooth scroll to the hash target
+            window.scrollTo({
+                top: document.querySelector(hash).offsetTop - offset,
+                behavior: 'smooth'
+            });
 
-    // Form validation
-    // const form = document.querySelector("#contactForm");
-    // form.addEventListener("submit", function(event) {
-    //     let valid = true;
-    //     const fields = ["name", "email", "subject", "message"];
-    //     fields.forEach(function(field) {
-    //         const input = document.getElementById(field);
-    //         if (input.value.trim() === "") {
-    //             valid = false;
-    //             input.classList.add("is-invalid");
-    //         } else {
-    //             input.classList.remove("is-invalid");
-    //         }
-    //     });
-
-    //     const email = document.getElementById("email");
-    //     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    //     if (!emailPattern.test(email.value.trim())) {
-    //         valid = false;
-    //         email.classList.add("is-invalid");
-    //     } else {
-    //         email.classList.remove("is-invalid");
-    //     }
-
-    //     if (!valid) {
-    //         event.preventDefault();
-    //     }
-    // });
+            // Close the responsive navbar menu after clicking on a link
+            const navbarCollapse = document.querySelector(".navbar-collapse");
+            navbarCollapse.classList.remove("show");
+        });
+    });
 
     // Responsive menu toggle
     const navbarToggler = document.querySelector(".navbar-toggler");
@@ -65,6 +25,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     navbarToggler.addEventListener("click", function() {
         navbarCollapse.classList.toggle("show");
+
+        // Toggle the aria-expanded attribute for accessibility
+        const isOpen = navbarCollapse.classList.contains("show");
+        navbarToggler.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    // Close navbar menu when clicking outside on mobile
+    document.addEventListener('click', function(event) {
+        if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
+            navbarCollapse.classList.remove('show');
+            navbarToggler.setAttribute("aria-expanded", "false");
+        }
     });
 
     // Animate navigation items on load
@@ -81,62 +53,69 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     animateNav(); // Trigger animation on initial load
+
+    // Back to top button functionality
+    const backToTopButton = document.getElementById("backToTop");
+    backToTopButton.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Show or hide back to top button based on scroll position
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 200) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    });
+
+    // Tab switching functionality
+    const tabLinks = document.querySelectorAll('.tab-links');
+    const tabContents = document.querySelectorAll('.tab-contents');
+
+    tabLinks.forEach(tabLink => {
+        tabLink.addEventListener('click', function() {
+            const tabName = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+            tabLinks.forEach(link => link.classList.remove('active-link'));
+            tabContents.forEach(content => content.classList.remove('active-tab'));
+
+            this.classList.add('active-link');
+            document.getElementById(tabName).classList.add('active-tab');
+        });
+    });
+
+    // Function to validate the contact form
+    function validateForm() {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const messageError = document.getElementById('messageError');
+
+        nameError.textContent = '';
+        emailError.textContent = '';
+        messageError.textContent = '';
+
+        let valid = true;
+
+        if (name === '') {
+            nameError.textContent = 'Please enter your name';
+            valid = false;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            emailError.textContent = 'Please enter a valid email address';
+            valid = false;
+        }
+
+        if (message === '') {
+            messageError.textContent = 'Please enter your message';
+            valid = false;
+        }
+
+        return valid;
+    }
 });
-
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
-function opentab(tabname){
-for (tablink of tablinks) {
-tablink.classList.remove("active-link");
-}
-for(tabcontent of tabcontents) {
-tabcontent.classList.remove("active-tab");
-}
-event.currentTarget.classList.add("active-link");
-document.getElementById(tabname).classList.add("active-tab");
-}
-
-// Function to validate the contact form
-function validateForm() {
-    // Selecting form elements by their IDs
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-
-    // Selecting error message elements
-    var nameError = document.getElementById('nameError');
-    var emailError = document.getElementById('emailError');
-    var messageError = document.getElementById('messageError');
-
-    // Resetting previous error messages
-    nameError.textContent = '';
-    emailError.textContent = '';
-    messageError.textContent = '';
-
-    // Simple validation checks
-    if (name.trim() === '') {
-        nameError.textContent = 'Please enter your name';
-        return false;
-    }
-    
-    if (email.trim() === '') {
-        emailError.textContent = 'Please enter your email';
-        return false;
-    }
-
-    // Email validation with regex
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        emailError.textContent = 'Please enter a valid email address';
-        return false;
-    }
-
-    if (message.trim() === '') {
-        messageError.textContent = 'Please enter your message';
-        return false;
-    }
-
-    // If all validations pass, the form will submit
-    return true;
-}
-
