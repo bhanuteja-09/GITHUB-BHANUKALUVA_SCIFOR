@@ -1,0 +1,47 @@
+<!-- 2.CREATE A CLASS COMPONENT THAT RENDERS A HEADING AND A PARAGRAPH WITH SOME INLINE STYLING -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Component Example</title>
+    <!-- I have used these links for the versions of frameworks that are suitable -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class HeadingAndParagraph extends React.Component {
+            render() {
+                const headingStyle = {
+                    color: 'blue',
+                    fontSize: '2em',
+                    textAlign: 'center'
+                };
+
+                const paragraphStyle = {
+                    color: 'orange',
+                    fontSize: '1em',
+                    textAlign: 'justify',
+                    margin: '20px'
+                };
+
+                return (
+                    <div>
+                        <h1 style={headingStyle}>This is a Heading</h1>
+                        <p style={paragraphStyle}>
+                            This is a paragraph with some inline styling. The text color is orange, and it is justified with a margin.
+                        </p>
+                    </div>
+                );
+            }
+        }
+
+        //Here i have used the ReactDOM.render method for react 17 version and ReactDOM.createRoot method is not supported the react 17 version
+        ReactDOM.render(<HeadingAndParagraph />, document.getElementById('root'));
+    </script>
+</body>
+</html>

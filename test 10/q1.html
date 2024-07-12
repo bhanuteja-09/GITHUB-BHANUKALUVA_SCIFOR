@@ -1,0 +1,43 @@
+<!-- 1.CREATE A FUNCTIONAL COMPONENT USERDETAILS THAT ACCEPTS PROPS AND RENDERS NAME: [PROPS.NAME], AGE: [PROPS.AGE],EMAIL:[PROPS.EMAIL],MOBILENO:[PROPS.MOBILENO] CITY: [PROPS.CITY]. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+   <!-- I have used these links for the versions of frameworks that are suitable -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function UserDetails({ name, age, email, mobileNo, city }) {
+            return (
+                <div>
+                    <p>Name: {name}</p>
+                    <p>Age: {age}</p>
+                    <p>Email: {email}</p>
+                    <p>Mobile No: {mobileNo}</p>
+                    <p>City: {city}</p>
+                </div>
+            );
+        }
+
+        const User = () => {
+            const userProps = {
+                name: "Bhanu Kaluva",
+                age: 24,
+                email: "bhanu.india@gmail.com",
+                mobileNo: "7729888344",
+                city: "Bangalore"
+            };
+
+            return <UserDetails name={userProps.name} age={userProps.age} email={userProps.email} mobileNo={userProps.mobileNo} city={userProps.city} />;
+        };
+
+        ReactDOM.render(<User />, document.getElementById('root'));
+    </script>
+</body>
+</html>
