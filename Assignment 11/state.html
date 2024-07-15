@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Component in JavaScript</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+<!-- Include React and ReactDOM development builds -->
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+<script>
+  // Your React component
+  class Sample extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        name: 'bhanu',
+        email: 'bhanu@gmail.com'
+      };
+      this.setName = this.setName.bind(this);
+      this.setEmail = this.setEmail.bind(this);
+    }
+
+    setName() {
+      this.setState({ name: 'tejaswini' });
+    }
+
+    setEmail() {
+      this.setState({ email: 'tejaswini@gmail.com' });
+    }
+
+    render() {
+      return (
+        React.createElement('div', null,
+          React.createElement('p', null, `Name: ${this.state.name}`),
+          React.createElement('p', null, `Email: ${this.state.email}`),
+          React.createElement('button', { onClick: this.setName }, 'Set Name'),
+          React.createElement('button', { onClick: this.setEmail }, 'Set Email')
+        )
+      );
+    }
+  }
+
+  // Render the component to the DOM
+  ReactDOM.render(
+    React.createElement(Sample),
+    document.getElementById('root')
+  );
+</script>
+
+</body>
+</html>
