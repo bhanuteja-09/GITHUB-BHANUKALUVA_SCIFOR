@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ClassComponent1 from './ClassComponent1';
+import UseState1 from './UseState1';
+import UseContext1 from './UseContext1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <ClassComponent1 />
+    <UseState1 />
+    <UseContext1 />
   </React.StrictMode>
 );
 
