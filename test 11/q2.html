@@ -3,12 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>React useRef Highlight Input Example</title>
-  <style>
-    .highlight-border {
-      border: 5px solid yellow;
-    }
-  </style>
+  <title>React Counter Component</title>
 </head>
 <body>
   <div id="root"></div>
@@ -16,19 +11,33 @@
   <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
   <script type="text/babel">
-    const { useRef } = React;
+    const { useState } = React;
 
-    function App() {
-      const inputRef = useRef(null);
+    function Counter() {
+      const [count, setCount] = useState(0);
 
-      const highlightInput = () => {
-        inputRef.current.classList.toggle('highlight-border');
+      const increment = () => {
+        setCount(count + 1);
+      };
+
+      const decrement = () => {
+        setCount(count - 1);
       };
 
       return (
         <div>
-          <input ref={inputRef} />
-          <button onClick={highlightInput}>Highlight Input</button>
+          <h2>Counter: {count}</h2>
+          <button onClick={increment}>Increment</button>
+          <button onClick={decrement}>Decrement</button>
+        </div>
+      );
+    }
+
+    function App() {
+      return (
+        <div>
+          <h1>Counter Component</h1>
+          <Counter />
         </div>
       );
     }
