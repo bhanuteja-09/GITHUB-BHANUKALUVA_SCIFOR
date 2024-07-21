@@ -3,7 +3,7 @@ function f1() {
       .then((res) => {
         return res.json();
       })
-      .then((data) => {
+         .then((data) => {
         // console.log(data);
       })
       
