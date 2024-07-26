@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Auth Context Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #root {
+            text-align: center;
+            background: #94f38d;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #ef7dc3;
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        #auth-status {
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background-color: #004494;
+            transform: scale(0.98);
+        }
+
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        const { createContext, useState, useContext } = React;
+
+        const AuthContext = createContext(null);
+
+        const AuthProvider = ({ children }) => {
+            const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+            const toggleLogin = () => {
+                setIsLoggedIn(!isLoggedIn);
+            };
+
+            return (
+                <AuthContext.Provider value={{ isLoggedIn, toggleLogin }}>
+                    {children}
+                </AuthContext.Provider>
+            );
+        };
+
+        const AuthStatus = () => {
+            const { isLoggedIn, toggleLogin } = useContext(AuthContext);
+
+            return (
+                <div>
+                    <div id="auth-status">
+                        {isLoggedIn ? <p>Welcome back, User!</p> : <p>Please log in.</p>}
+                    </div>
+                    <button id="auth-button" onClick={toggleLogin}>
+                        {isLoggedIn ? 'Logout' : 'Login'}
+                    </button>
+                </div>
+            );
+        };
+
+        const App = () => (
+            <AuthProvider>
+                <h1>React Authentication</h1>
+                <AuthStatus />
+            </AuthProvider>
+        );
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
