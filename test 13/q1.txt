@@ -1,0 +1,25 @@
+What is restful api?
+
+The fulform of restful api is representational state transfer and it is a set of rules and conventions for building and interacting with web server
+
+It performs the CRUD operations
+
+C indicated Create
+R indicates Read
+U indicates Update
+D indicates Delete
+
+Key Concepts of RESTful API:
+
+A resource is any peice of information and it is a collection of data, name, user etc
+and it is identify by URL'server
+
+The RESTful API having some HTTP methods such as
+
+1.GET - GEt method is used for retriveing the data from server
+2.POST - POST method is used for send the data to the server
+3.PUT - PUT method is used for update the existing resources
+4.PATCH - PATCH method is used for Partially updating the existing resources
+5.DELETE - Delete method is used for removing the resources from server
+
+use Fetch api to make request to RESTful api
